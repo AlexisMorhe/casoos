@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Rebond';
+  src: url("../../public/fonts/rebond.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Chillax';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chillax';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Extralight.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chillax';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chillax';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chillax';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Semibold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chillax';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-Regular.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-RegularItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-Medium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-MediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-Semibold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-SemiboldItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-Extrabold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-ExtraboldItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-Black.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Domaine';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Domaine'), url('../../public/fonts/DomaineDispNar-BlackItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lexend'), url('../../public/fonts/Lexend-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Lexend'), url('../../public/fonts/Lexend-Medium.woff2') format('woff2');
+}
