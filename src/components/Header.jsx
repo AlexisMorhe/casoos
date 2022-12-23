@@ -1,13 +1,15 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
 import {FiMenu} from "react-icons/fi";
 import {IoClose} from "react-icons/io5";
 
 import {useRouter} from "next/router";
 import Image from "next/image";
+import Link from 'next/link';
 
 import logoCasoos from "@/images/logos/casoos_text.svg";
 import NavLink from "@/components/NavLink";
 import Button from "@/components/Button";
+import {UserContext} from "../../context/userContext";
 
 const navigation = [
   { name: 'Inicio', href: '/' },
@@ -17,6 +19,7 @@ const navigation = [
 export default function Header() {
 
   const [openMenu, setOpenMenu] = useState(false);
+  const {setUserType} = useContext(UserContext);
   const router = useRouter();
 
   useEffect(() => {
@@ -33,14 +36,14 @@ export default function Header() {
             <div className='pt-3 pr-5 block md:hidden'>
               <FiMenu onClick={() => setOpenMenu(openMenu => !openMenu)} size={25} />
             </div>
-            <Image width={100} src={logoCasoos} alt='Logo del sitio' priority/>
+            <Link href='/'><Image width={100} src={logoCasoos} alt='Logo del sitio' priority/></Link>
             <div className='hidden md:flex justify-around items-center w-52 md:w-80 mr-0 lg:mr-12'>
               {navigation.map((item, index) => <NavLink key={index} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
             </div>
           </div>
-          <div className='w-1/3 sm:w-1/2  md:w-80 flex items-center justify-around'>
-            <NavLink href='/login'>Iniciar sesión</NavLink>
-            <Button color='blue' href='/registro'>Registrate</Button>
+          <div className='w-1/3 sm:w-1/2 md:w-80 flex justify-around items-center'>
+            <div><NavLink href='/login'>Iniciar sesión</NavLink></div>
+            <Button color='blue' href='/registro'>Regístrate</Button>
           </div>
         </div>
       </div>
@@ -49,11 +52,11 @@ export default function Header() {
         <div className='h-24 w-full flex items-center justify-start pt-1 pl-4'>
           <IoClose onClick={() => setOpenMenu(menu => !menu)} size={30} />
         </div>
-        <div className='flex flex-col md:hidden justify-around items-center pt-10 w-full'>
+        <div className='flex flex-col md:hidden justify-around text-lg items-center pt-10 w-full'>
           {navigation.map((item, index) => <NavLink mobile={true} key={index} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
           <div className='w-5/6 pt-16 h-52 flex flex-col justify-around'>
-            <Button height='tall' variant='outline' href='/registro'>Registrate como comprador</Button>
-            <Button height='tall' color='blue' href='/registro-agente'>Registrate como vendedor</Button>
+            <Button onClick={() => setUserType('cliente')} size='medium' color='white' variant='outline' href='/registro'>Registrate como cliente</Button>
+            <Button onClick={() => setUserType('abogado')} size='medium' color='blue' href='/registro-agente'>Registrate como abogado</Button>
           </div>
         </div>
       </div>
