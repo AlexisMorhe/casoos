@@ -1,11 +1,17 @@
 import Button from "@/components/Button";
 import LogoCloud from "@/components/LogoCloud";
 import {useContext} from "react";
+import {useRouter} from "next/router";
 import {UserContext} from "../../context/userContext";
 
 export default function Hero() {
-
+  const router = useRouter();
   const {setUserType} = useContext(UserContext);
+
+  const handleClick = (userType) => {
+    setUserType(userType);
+    router.push('/registro')
+  }
 
   return (
     <div className="isolate bg-white pt-14 pb-24 sm:pt-24 text-slate-900">
@@ -45,8 +51,8 @@ export default function Hero() {
             ¡Con nuestra plataforma, puedes simplificar tu proceso legal y enfocarte en lo que realmente importa: tu caso y tu éxito!
           </h2>
           <div className="mt-8 flex gap-x-4 sm:justify-center">
-            <Button href='/registro' onClick={setUserType('cliente')} height='tall' color='blue'>Soy un abogado</Button>
-            <Button href='/registro' onClick={setUserType('abogado')} variant='outline' color='blue'>Busco un abogado</Button>
+            <Button onClick={() => handleClick('lawyer')} height='tall' color='blue'>Soy un abogado</Button>
+            <Button onClick={() => handleClick('client')} variant='outline' color='blue'>Busco un abogado</Button>
           </div>
         </div>
         <LogoCloud/>

@@ -55,8 +55,8 @@ export default function Header() {
         <div className='flex flex-col md:hidden justify-around text-lg items-center pt-10 w-full'>
           {navigation.map((item, index) => <NavLink mobile={true} key={index} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
           <div className='w-5/6 pt-16 h-52 flex flex-col justify-around'>
-            <Button onClick={() => setUserType('cliente')} size='medium' color='white' variant='outline' href='/registro'>Registrate como cliente</Button>
-            <Button onClick={() => setUserType('abogado')} size='medium' color='blue' href='/registro-agente'>Registrate como abogado</Button>
+            <Button onClick={() => setUserType('client')} size='medium' color='white' variant='outline' href='/registro'>Registrate como cliente</Button>
+            <Button onClick={() => setUserType('lawyer')} size='medium' color='blue' href='/registro-agente'>Registrate como abogado</Button>
           </div>
         </div>
       </div>
