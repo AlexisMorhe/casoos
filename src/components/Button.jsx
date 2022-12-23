@@ -2,8 +2,8 @@ import Link from "next/link";
 import clsx from "clsx";
 
 const baseStyles = {
-  solid: 'block text-center sm:mb-0 px-4 sm:px-8 font-lexend rounded-md transition-all',
-  outline: 'block text-center sm:mb-0 px-4 sm:px-8 font-lexend rounded-md transition-all border-2'
+  solid: 'block text-center sm:mb-0 px-4 sm:px-8 font-lexend rounded-md transition-all hover:scale-105',
+  outline: 'block text-center sm:mb-0 px-4 sm:px-8 font-lexend rounded-md transition-all border-2 hover:scale-105'
 }
 
 const variantStyles = {
@@ -14,7 +14,8 @@ const variantStyles = {
   outline: {
     slate: 'border-slate-900 text-slate-900 shadow-md',
     white: 'ring-slate-50 text-slate-50 shadow-md',
-    blue: 'border-sky-900 text-sky-900'
+    blue: 'border-sky-900 text-sky-900 shadow-md',
+    gray: 'border-slate-500 text-slate-500 shadow-md'
   }
 }
 

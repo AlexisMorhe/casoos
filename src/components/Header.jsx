@@ -36,7 +36,7 @@ export default function Header() {
             <div className='pt-3 pr-5 block md:hidden'>
               <FiMenu onClick={() => setOpenMenu(openMenu => !openMenu)} size={25} />
             </div>
-            <Link href='/'><Image width={100} src={logoCasoos} alt='Logo del sitio' priority/></Link>
+            <div className='transition-all hover:scale-110'><Link href='/'><Image width={100} src={logoCasoos} alt='Logo del sitio' priority/></Link></div>
             <div className='hidden md:flex justify-around items-center w-52 md:w-80 mr-0 lg:mr-12'>
               {navigation.map((item, index) => <NavLink key={index} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
             </div>
